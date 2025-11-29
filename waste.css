@@ -4,3 +4,27 @@ body{
     background: #f7fafc;
     color: #333;
 }
+/* Header */
+header{
+    background: linear-gradient(90deg , #43A047,#2E7D32);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+header h1{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+nav a:hover{
+    text-decoration: underline;
+}
