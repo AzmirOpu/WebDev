@@ -28,3 +28,16 @@ nav a{
 nav a:hover{
     text-decoration: underline;
 }
+/* hero section */
+.hero{
+    background: url("waste.jpg")center/cover no-repeat;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
