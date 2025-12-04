@@ -111,3 +111,34 @@ footer {
   background: #2E7D32;
   color: white;
 }
+
+/* -----------------------------pickup shedule */
+/* ----------------------------------------------recycling  */
+.modal {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+    overflow: hidden;
+
+    /* Animation */
+    transform: translateX(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.modal.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.modal-content {
+    padding: 15px;
+}
+
+
