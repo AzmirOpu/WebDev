@@ -14,9 +14,13 @@
     <section class="container">
         <h2>📝 File a Complaint</h2>
         <form>
-            <input type="text" placeholder="Your Full Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <select required>
+            <input type="text" id="nameInput" placeholder="Your Full Name">
+            <span class="nameError" id="nameError"></span>
+
+            <input type="email" id="emailInput" placeholder="Your Email">
+            <span class="emailError" id="emailError"></span>
+
+            <select id="service">
                 <option value="" disabled selected>-- Select Service --</option>
                 <option>🚍 Transport</option>
                 <option>🏥 Healthcare</option>
@@ -24,13 +28,17 @@
                 <option>🚮 Waste Management</option>
                 <option>Other</option>
             </select>
-            <textarea placeholder="Describe your issue..." rows="5" required></textarea>
-            <button type="submit">Submit Complaint</button>
+            <span id="serviceError"></span>
+            <textarea id="description" placeholder="Describe your issue..." rows="5"></textarea>
+            <span id="descError"></span>
+            <button type="submit" id="submitBtn">Submit Complaint</button>
         </form>
     </section>
 
 <footer>
   <p>© 2025 Smart City Portal | Designed by Opu, Sakib & Kayes</p>
 </footer>
+
+<script src="complaints.js"></script>
 </body>
 </html>
