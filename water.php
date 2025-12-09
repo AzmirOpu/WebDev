@@ -5,11 +5,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+
 $address = $_POST['address'];
+$issue = $_POST['issue'];
 $description = $_POST['description'];
 
-$sql = "INSERT INTO store_data (address, description) 
-        VALUES ('$address', '$description')";
+$sql = "INSERT INTO watercomp (address, issue, description) 
+        VALUES ('$address', '$issue', '$description')";
 
 if ($conn->query($sql) === TRUE) {
     header("Location: index.php?status=success");

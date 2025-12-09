@@ -75,16 +75,16 @@
   <!-- ISSUE REPORT FORM -->
   <div class="card">
     <h2>Report a Water Issue</h2>
-    <form>
-      <input type="text" placeholder="Your Address" class="input-field">
-      <select class="input-field">
+    <form method="post" action="water.php">
+      <input type="text" name="address" placeholder="Your Address" class="input-field" required>
+      <select class="input-field" name="issue" required>
         <option>Select Issue Type</option>
         <option>No Water Supply</option>
         <option>Low Pressure</option>
         <option>Pipeline Leakage</option>
         <option>Contaminated Water</option>
       </select>
-      <textarea class="input-field" rows="3" placeholder="Describe your issue..."></textarea>
+      <textarea class="input-field" name="description" rows="3" placeholder="Describe your issue..." required></textarea>
       <button class="btn">Submit Report</button>
     </form>
   </div>

@@ -28,23 +28,23 @@
 
     <!-- RIGHT SIDE FORM -->
     <div class="payment-form">
-      <form>
+      <form action="payment.php" method="POST">
 
         <label>Service</label>
-        <select>
+        <select name="service" required>
           <option>Electricity</option>
           <option>Water</option>
           <option>Gas</option>
         </select>
 
         <label>Customer ID</label>
-        <input type="text" placeholder="Enter your customer ID">
+        <input type="text" name="customer_id" placeholder="Enter your customer ID" required>
 
         <label>Amount</label>
-        <input type="number" placeholder="Enter amount">
+        <input type="number" name="amount" placeholder="Enter amount" required>
 
         <label>Payment Method</label>
-        <select id="paymentMethod">
+        <select id="paymentMethod" name="payment_method" required>
           <option value="card">Credit/Debit Card</option>
           <option value="mobile">Mobile Banking</option>
           <option value="net">Net Banking</option>
@@ -56,23 +56,23 @@
 
           <div class="logo-row">
             <label class="logo-card">
-              <input type="radio" name="mb" value="bkash">
-              <img src="https://i.postimg.cc/XYq08sM8/bkash.png" alt="Bkash">
+              <input type="radio" name="mobile_bank" value="bkash">
+              <img src="Bkash-logo.png" alt="Bkash">
             </label>
 
             <label class="logo-card">
-              <input type="radio" name="mb" value="nagad">
-              <img src="https://i.postimg.cc/Yq8xKkCK/nagad.png" alt="Nagad">
+              <input type="radio" name="mobile_bank" value="nagad">
+              <img src="nagad_logo.png" alt="Nagad">
             </label>
 
             <label class="logo-card">
-              <input type="radio" name="mb" value="rocket">
-              <img src="https://i.postimg.cc/Wb0V3cgG/rocket.png" alt="Rocket">
+              <input type="radio" name="mobile_bank" value="rocket">
+              <img src="rocket_logo.png" alt="Rocket">
             </label>
           </div>
         </div>
 
-        <button class="btn">Pay Now</button>
+        <button type="submit" class="btn">Pay Now</button>
 
       </form>
     </div>
@@ -90,6 +90,33 @@ const mobileBox = document.getElementById("mobileOptions");
 
 method.addEventListener("change", () => {
   mobileBox.style.display = method.value === "mobile" ? "block" : "none";
+});
+
+// HANDLE FORM SUBMISSION
+document.querySelector("form").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  try {
+    const response = await fetch("payment.php", {
+      method: "POST",
+      body: formData
+    });
+
+    const result = await response.json();
+
+    if (result.status === "success") {
+      alert(result.message);
+      this.reset();
+      // Hide mobile options after reset
+      mobileBox.style.display = "none";
+    } else {
+      alert("Error: " + result.message);
+    }
+  } catch (error) {
+    alert("An error occurred: " + error.message);
+  }
 });
 </script>
 

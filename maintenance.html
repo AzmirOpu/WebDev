@@ -106,10 +106,10 @@
   <div class="card">
     <h2>Report a Maintenance Issue</h2>
 
-    <form>
-      <input type="text" placeholder="Your Address" class="input-field">
+    <form method="post" action="water.php">
+      <input type="text" name="address" placeholder="Your Address" class="input-field" required>
 
-      <select class="input-field">
+      <select class="input-field" name="issue" required>
         <option>Select Issue Type</option>
         <option>Electricity Problem</option>
         <option>Water Leakage</option>
@@ -118,7 +118,7 @@
         <option>Other</option>
       </select>
 
-      <textarea rows="3" class="input-field" placeholder="Describe your issue..."></textarea>
+      <textarea rows="3" name="description" class="input-field" placeholder="Describe your issue..." required></textarea>
 
       <button class="btn">Submit Request</button>
     </form>
