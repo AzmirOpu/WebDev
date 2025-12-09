@@ -8,36 +8,12 @@ $result = $conn->query("SELECT * FROM complaints ORDER BY id DESC");
 <head>
     <title>Complaints Panel</title>
     <style>
-        body {
-            font-family: Arial;
-            background: #f4f4f4;
-            padding: 20px;
-        }
-        h2{
-            margin-bottom: 20px;
-        }
-        table {
-            width: 100%;
-            background: white;
-            border-collapse: collapse;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: center;
-        }
-        th {
-            background: #222;
-            color: white;
-        }
-        .btn {
-            padding: 6px 10px;
-            text-decoration: none;
-            color: white;
-            border-radius: 5px;
-            font-size: 14px;
-        }
+        body {font-family: Arial;background: #f4f4f4;padding: 20px;}
+        h2{margin-bottom: 20px;}
+        table {width: 100%;background: white;border-collapse: collapse;box-shadow: 0 0 5px rgba(0,0,0,0.1);}  
+        th, td {border: 1px solid #ddd;padding: 12px;text-align: center;}
+        th {background: #222;color: white; }
+        .btn {padding: 6px 10px;text-decoration: none;color: white;border-radius: 5px;font-size: 14px;}
         .accept { background: green; }
         .reject { background: red; }
         .pending { background: orange; }

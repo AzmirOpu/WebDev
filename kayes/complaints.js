@@ -14,6 +14,7 @@ const descError = document.getElementById("descError");
 function validateName(){
     if(nameInput.value.trim() === ""){
         nameError.textContent = "Name is required";
+        nameError.style.color = "#1565C0"
         return false;
     }
     else {
@@ -23,16 +24,16 @@ function validateName(){
 }
 
 // email validate
-
-
 function validateEmail() {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (emailInput.value.trim() === "") {
     emailError.textContent = "Email is required";
+    emailError.style.color = "#1565C0"
     return false;
   } else if (!emailPattern.test(emailInput.value)) {
     emailError.textContent = "Enter a valid email address";
+    emailError.style.color = "#1565C0"
     return false;
   } else {
     emailError.textContent = "";
@@ -40,25 +41,24 @@ function validateEmail() {
   }
 }
 // service option 
-
-
 function validateService() {
   if (serviceSelect.value === "") {
     serviceError.textContent = "Please select a service";
+    serviceError.style.color = "#1565C0"
     return false;
   } else {
     serviceError.textContent = "";
     return true;
   }
 }
+
 // dexcription 
-
-
 function validateDescription() {
   const length = descInput.value.trim().length;
 
   if (length < 10) {
     descError.textContent = "Description must be at least 10 characters";
+    descError.style.color = "#1565C0"
     return false;
   } else {
     descError.textContent = "";

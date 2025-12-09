@@ -20,14 +20,25 @@
 </header>
 <div class="container">
   <h2>🚨 Submit a Report</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="text" placeholder="Location" required>
-    <input type="file">
-    <textarea rows="4" placeholder="Describe the issue..." required></textarea>
-    <button type="submit">Submit Report</button>
+
+  <form action="DumpSubmit.php" method="POST" enctype="multipart/form-data">
+
+    <input type="text" id="dumpName" name="dumpName" placeholder="Your Name">
+    <span id="inputNaError"></span>
+
+    <input type="text" id="inputLoca" name="dumpLoca" placeholder="Location">
+    <span id="inputLocation"></span>
+
+    <input type="file" id="file" name="file">
+    <span id="inputFile"></span>
+
+    <textarea rows="4" id="dumpDesc" name="dumpDesc" placeholder="Describe the issue..."></textarea>
+    <span id="dumpDesc"></span>
+
+    <button type="submit" id="Dumpsubmit" name="Dumpsubmit">Submit Report</button>
   </form>
 </div>
 <footer>© 2025 Smart City Portal</footer>
+<script src="reportDump.js"></script>
 </body>
 </html>
