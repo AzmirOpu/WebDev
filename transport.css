@@ -98,13 +98,15 @@ nav a:hover {
   margin-bottom: 15px;
 }
 .card button {
-  background: #1565C0;
+  padding: 6px;
+  height: 35px;
+  width: 130px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background:#1976D2;
   color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 30px;
+  font-size: 15px;
   cursor: pointer;
-  transition: background 0.3s;
 }
 .card button:hover {
   background: #0d47a1;
