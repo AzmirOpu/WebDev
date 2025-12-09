@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Appointment – CarePoint</title>
+  <link rel="stylesheet" href="Healthcare.css">
+</head>
+
+<body>
+
+<section class="section">
+  <div class="container" style="max-width:600px;">
+
+    <div class="card" style="padding:2rem;">
+      <h1>Book Doctor Appointment</h1>
+      <p class="card-subtitle">Choose your preferred doctor and appointment date.</p>
+
+      <form class="hero-form" style="margin-top:1.5rem;">
+
+        <label>
+          Full Name
+          <input type="text" name="name" placeholder="Enter your name" required>
+        </label>
+
+        <label>
+          Select Doctor
+          <select name="service">
+            <option value="Dr. Rahim Ahmed">Dr. Rahim Ahmed (Cardiologist)</option>
+            <option value="Dr. Nila Sultana">Dr. Nila Sultana (Pediatrician)</option>
+            <option value="Dr. Kamrul Mia">Dr. Kamrul Mia (Surgeon)</option>
+          </select>
+        </label>
+
+        <label>
+          Appointment Date
+          <input type="date" name="date" required>
+        </label>
+
+        <label>
+          Phone Number
+          <input type="tel" name="phone" placeholder="+8801..." required>
+        </label>
+
+        <label>
+          Email (Optional)
+          <input type="email" name="email" placeholder="you@example.com">
+        </label>
+
+        <button type="submit" class="btn primary-btn full-btn" style="margin-top:1rem;">
+          Confirm Appointment
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<script src="healthcare.js"></script>
+</body>
+</html>

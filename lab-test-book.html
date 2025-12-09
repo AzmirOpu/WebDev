@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Lab Test – CarePoint</title>
+  <link rel="stylesheet" href="Healthcare.css">
+</head>
+
+<body>
+
+<section class="section">
+  <div class="container" style="max-width:600px;">
+
+    <div class="card" style="padding:2rem;">
+      <h1>Book Lab Test</h1>
+      <p class="card-subtitle">Choose your preferred test and schedule home sample collection.</p>
+
+      <form class="hero-form" style="margin-top:1.5rem;">
+
+        <label>
+          Full Name
+          <input type="text" name="name" placeholder="Enter your name" required>
+        </label>
+
+        <label>
+          Select Lab Test
+          <select name="service">
+            <option value="Full Body Checkup">Full Body Checkup</option>
+            <option value="Diabetes Profile">Diabetes Profile</option>
+            <option value="Heart Health Panel">Heart Health Panel</option>
+          </select>
+        </label>
+
+        <label>
+          Preferred Date
+          <input type="date" name="date" required>
+        </label>
+
+        <label>
+          Phone Number
+          <input type="tel" name="phone" placeholder="+8801..." required>
+        </label>
+
+        <label>
+          Email (Optional)
+          <input type="email" name="email" placeholder="you@example.com">
+        </label>
+
+        <button type="submit" class="btn primary-btn full-btn" style="margin-top:1rem;">
+          Submit Request
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+<script src="healthcare.js"></script>
+</body>
+</html>

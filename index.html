@@ -2,122 +2,329 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>CarePoint Health</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smart City Services Portal</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="Healthcare.css" />
 </head>
+
 <body>
-  <header>
-    <h1>Smart City Portal</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Map</a>
-      <a href="#">Emergency</a>
-      <a href="#">Contact</a>
-      <a href="login.html">Login</a>
-    </nav>
+
+  <!-- Header / Navbar -->
+  <header class="header">
+    <div class="container nav">
+      <div class="logo">
+        <span class="logo-icon">+</span>
+        <span class="logo-text">CarePoint</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#hospitals">Hospitals</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#labs">Lab Tests</a>
+        <a href="#pharmacy">Pharmacy</a>
+        <a href="#contact" class="nav-btn">Book Now</a>
+      </nav>
+    </div>
   </header>
+
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <h2>Smart City Services at Your Fingertips</h2>
-      <p>One-stop portal for transport, healthcare, utilities, and more</p>
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Quality Healthcare, Anytime You Need It.</h1>
+        <p>
+          Find trusted hospitals, book appointments with certified doctors,
+          schedule lab tests, and order medicines from one place.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#doctors" class="btn primary-btn">Find a Doctor</a>
+          <a href="#labs" class="btn ghost-btn">Book Lab Test</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Hospitals</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">200+</span>
+            <span class="stat-label">Specialist Doctors</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Pharmacy & Support</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Appointment Form -->
+      <div class="hero-card">
+        <h2>Quick Appointment</h2>
+        <p>Fill in your details and we’ll schedule an appointment for you.</p>
+
+        <form class="hero-form">
+          <label>
+            Full Name
+            <input type="text" name="name" placeholder="Enter your name" required />
+          </label>
+
+          <label>
+            Choose Service
+            <select name="service">
+              <option value="Consult a Doctor">Consult a Doctor</option>
+              <option value="Hospital Admission">Hospital Admission</option>
+              <option value="Lab Test">Lab Test</option>
+              <option value="Order Medicines">Order Medicines</option>
+            </select>
+          </label>
+
+          <label>
+            Preferred Date
+            <input type="date" name="date" />
+          </label>
+
+          <label>
+            Phone Number
+            <input type="tel" name="phone" placeholder="+8801..." required />
+          </label>
+
+          <button type="submit" class="btn primary-btn full-btn">Request Appointment</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hospitals Section -->
+  <section id="hospitals" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Partner Hospitals</h2>
+        <p>Trusted, well-equipped hospitals available near you.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card hospital-card">
+          <div class="card-badge">24/7</div>
+          <h3>Able General Hospital</h3>
+          <p class="card-subtitle">Modern multi-specialty hospital with emergency care.</p>
+          <ul class="card-list">
+            <li>📍 Dhanmondi, Dhaka</li>
+            <li>🕒 Open: 24/7 Emergency</li>
+            <li>☎ Hotline: 1234</li>
+          </ul>
+          <button class="btn ghost-btn small-btn">View Details</button>
+        </article>
+
+        <article class="card hospital-card">
+          <div class="card-badge badge-secondary">ICU</div>
+          <h3>City Care Medical Center</h3>
+          <p class="card-subtitle">Advanced ICU, NICU and cardiac care.</p>
+          <ul class="card-list">
+            <li>📍 Uttara, Dhaka</li>
+            <li>🕒 8:00 AM – 11:00 PM</li>
+            <li>☎ Hotline: 5678</li>
+          </ul>
+          <button class="btn ghost-btn small-btn">View Details</button>
+        </article>
+
+        <article class="card hospital-card">
+          <div class="card-badge badge-outline">Specialized</div>
+          <h3>Green Valley Clinic</h3>
+          <p class="card-subtitle">Day-care surgeries and specialist consultations.</p>
+          <ul class="card-list">
+            <li>📍 Banani, Dhaka</li>
+            <li>🕒 9:00 AM – 9:00 PM</li>
+            <li>☎ Hotline: 9012</li>
+          </ul>
+          <button class="btn ghost-btn small-btn">View Details</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctors Section -->
+  <section id="doctors" class="section light-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Top Doctors</h2>
+        <p>Highly experienced, verified and patient-friendly doctors.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card doctor-card">
+          <div class="avatar">RA</div>
+          <h3>Dr. Rahim Ahmed</h3>
+          <p class="card-subtitle">Cardiologist • 12+ yrs experience</p>
+          <div class="doctor-meta">
+            <span>🏥 Able General Hospital</span>
+            <span>⭐ 4.9/5</span>
+          </div>
+          <button class="btn primary-btn small-btn">Book Appointment</button>
+        </article>
+
+        <article class="card doctor-card">
+          <div class="avatar">NS</div>
+          <h3>Dr. Nila Sultana</h3>
+          <p class="card-subtitle">Pediatrician • 8+ yrs experience</p>
+          <div class="doctor-meta">
+            <span>🏥 City Care Medical Center</span>
+            <span>⭐ 4.8/5</span>
+          </div>
+          <button class="btn primary-btn small-btn">Book Appointment</button>
+        </article>
+
+        <article class="card doctor-card">
+          <div class="avatar">KM</div>
+          <h3>Dr. Kamrul Mia</h3>
+          <p class="card-subtitle">General Surgeon • 10+ yrs experience</p>
+          <div class="doctor-meta">
+            <span>🏥 Green Valley Clinic</span>
+            <span>⭐ 4.7/5</span>
+          </div>
+          <button class="btn primary-btn small-btn">Book Appointment</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lab Tests Section -->
+  <section id="labs" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Lab Tests & Diagnostics</h2>
+        <p>Safe, accurate tests with home sample collection option.</p>
+      </div>
+
+      <div class="lab-layout">
+        <div class="lab-info">
+          <h3>Why book lab tests with us?</h3>
+          <ul class="checklist">
+            <li>Certified and hygienic labs</li>
+            <li>Home sample collection</li>
+            <li>Digital reports on your phone</li>
+            <li>Fast turnaround time</li>
+          </ul>
+        </div>
+
+        <div class="card-grid lab-cards">
+          <article class="card lab-card">
+            <h3>Full Body Checkup</h3>
+            <p class="card-subtitle">Includes CBC, Blood Sugar, Liver & Kidney profile.</p>
+            <p class="lab-price">From ৳ 4,999</p>
+            <button class="btn ghost-btn small-btn">Book Test</button>
+          </article>
+
+          <article class="card lab-card">
+            <h3>Diabetes Profile</h3>
+            <p class="card-subtitle">Fasting, PP, HbA1c and more.</p>
+            <p class="lab-price">From ৳ 1,499</p>
+            <button class="btn ghost-btn small-btn">Book Test</button>
+          </article>
+
+          <article class="card lab-card">
+            <h3>Heart Health Panel</h3>
+            <p class="card-subtitle">Cholesterol, Triglycerides, ECG & more.</p>
+            <p class="lab-price">From ৳ 3,499</p>
+            <button class="btn ghost-btn small-btn">Book Test</button>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pharmacy Section -->
+  <section id="pharmacy" class="section light-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>Online Pharmacy</h2>
+        <p>Order genuine medicines and health products at your doorstep.</p>
+      </div>
+
+      <div class="pharmacy-grid">
+        <div class="pharmacy-main">
+          <h3>What we offer</h3>
+          <ul class="checklist">
+            <li>100% genuine medicines</li>
+            <li>Upload prescription easily</li>
+            <li>Fast delivery</li>
+            <li>Refill reminders</li>
+          </ul>
+          <a href="#contact" class="btn primary-btn">Order Medicines</a>
+        </div>
+
+        <div class="card-grid pharmacy-cards">
+          <article class="card pharmacy-card">
+            <h3>Essential Medicines</h3>
+            <p class="card-subtitle">Fever, cold, antibiotics & more.</p>
+          </article>
+
+          <article class="card pharmacy-card">
+            <h3>Wellness & Vitamins</h3>
+            <p class="card-subtitle">Vitamins, supplements, protein.</p>
+          </article>
+
+          <article class="card pharmacy-card">
+            <h3>Baby & Mother Care</h3>
+            <p class="card-subtitle">Diapers, formula, skincare.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="section contact-section">
+    <div class="container contact-grid">
+
       <div>
-        <button>Explore Services</button>
-        <button>Report Issue</button>
-      </div>
-    </div>
-  </section>
-  <section class="services">
-    <h2>Our Services</h2>
-    <div class="grid">
-      <a href="transport.html" class="card-link">
-      <div class="card">
-        <h3>🚌 Transport</h3>
-        <p>Find bus, metro, and taxi routes easily.</p>
-      </div>
-      </a>
-      <div class="card">
-        <h3>🏥 Healthcare</h3>
-        <p>Locate hospitals and book appointments online.</p>
+        <h2>Contact & Support</h2>
+        <p>Need help choosing a doctor or booking a test?</p>
+
+        <ul class="contact-list">
+          <li>☎ Hotline: +880-1764415019</li>
+          <li>📧 Email: support@carepoint.health</li>
+          <li>📍 Address: Dhaka, Bangladesh</li>
+        </ul>
       </div>
 
-      <a href="utilities.html" class="card-link">
-  <div class="card">
-    <h3>💧 Utilities</h3>
-    <p>Manage bills and services for water, gas, and electricity.</p>
-  </div>
-</a>
-      <a href="kayes/waste.html">
-        <div class="card">
-          <h3>🚮 Waste Management</h3>
-          <p>Track pickup schedules and recycling options.</p>
-        </div>
-      </a>
-      
-      <a href="kayes/complaints.html">
-        <div class="card">
-          <h3>📝 Complaints</h3>
-          <p>Submit and monitor issues with city services.</p>
-        </div>
-      </a>
-      
-      <div class="card">
-        <h3>📍 City Map</h3>
-        <p>Explore hospitals, bus stops, and utility offices on the map.</p>
-      </div>
+      <form class="contact-form">
+        <label>
+          Your Name
+          <input type="text" name="name" placeholder="Enter your name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" />
+        </label>
+
+        <label>
+          Message
+          <textarea rows="4" name="message" placeholder="How can we help you?" required></textarea>
+        </label>
+
+        <button type="submit" class="btn primary-btn full-btn">Send Message</button>
+      </form>
+
     </div>
   </section>
 
-  <section class="info">
-    <h2>Quick Info</h2>
-    <div class="grid">
-      <div class="card">
-        <div class="icon icon-red">📞</div>
-        <h3>Emergency: 999</h3>
-        <p>Police, Fire, Ambulance</p>
-      </div>
-      <div class="card">
-        <div class="icon icon-blue">📢</div>
-        <h3>Announcements</h3>
-        <p>Stay updated on city news & alerts</p>
-      </div>
-      <div class="card">
-        <div class="icon icon-yellow">⚡</div>
-        <h3>Power Outage</h3>
-        <p>Real-time updates on electricity</p>
-      </div>
-      <div class="card">
-        <div class="icon icon-green">🌦</div>
-        <h3>Weather</h3>
-        <p>Today: Sunny, 32°C</p>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <div>
-      <h3>About Us</h3>
-      <p>Smart City Portal is your digital gateway to essential services and city updates.</p>
-    </div>
-    <div>
-      <h3>Quick Links</h3>
-      <p><a href="#">Transport</a></p>
-      <p><a href="#">Healthcare</a></p>
-      <p><a href="#">Utilities</a></p>
-      <p><a href="#">Waste Management</a></p>
-    </div>
-    <div>
-      <h3>Contact</h3>
-      <p>Email: ajmiropu@gmail.com</p>
-      <p>Phone: +880 1764-415019</p>
-      <p>Address: Dhaka, Bangladesh</p>
-    </div>
-    <div class="footer-bottom">
-      © 2025 Smart City Portal | Designed by Team 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2025 CarePoint Health. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- JS LINK -->
+  <script src="healthcare.js"></script>
+
 </body>
 </html>
